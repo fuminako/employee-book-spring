@@ -48,4 +48,8 @@ public class EmployeeService {
     public Collection<Employee> getSalaryAboveAverage() {
         return employees.values().stream().filter(e -> e.getSalary() > getAverageS()).toList();
     }
+
+    public Employee removeEmployee (int id){
+        return employees.remove(id);
+    }
 }
